@@ -8,7 +8,7 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}ViewInput {
+class {{ module_info.name }}ViewController: UIViewController {
     
     private var _didSetupConstraints = false
     var output: {{ module_info.name }}ViewOutput!
@@ -19,8 +19,6 @@ extension {{ module_info.name }}ViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.view.setNeedsUpdateConstraints()
         output.viewIsReady()
     }  
     
@@ -36,10 +34,11 @@ extension {{ module_info.name }}ViewController {
 }
 
 // MARK: {{module_info.name}}ViewInput
-extension {{ module_info.name }}ViewController {
+extension {{ module_info.name }}ViewController:{{module_info.name}}ViewInput {
   
     func setupInitialState() {
-        
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.setNeedsUpdateConstraints()
     }
 }
 
