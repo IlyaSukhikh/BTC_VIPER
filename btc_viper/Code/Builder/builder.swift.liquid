@@ -8,9 +8,9 @@
 
 import UIKit
 
-class {{ module_info.name }}Builder {
-
     typealias {{ module_info.name }}ModuleBox = (viewController: {{ module_info.name }}ViewController, input: {{ module_info.name }}ModuleInput, output: {{ module_info.name }}ModuleOutput)
+
+class {{ module_info.name }}Builder {
 
     func createModule() -> {{ module_info.name }}ModuleBox {
         let viewController = {{ module_info.name }}ViewController()
