@@ -13,7 +13,6 @@ class {{ module_info.name }}Builder {
     typealias {{ module_info.name }}ModuleBox = (viewController: {{ module_info.name }}ViewController, input: {{ module_info.name }}ModuleInput, output: {{ module_info.name }}ModuleOutput)
 
     func createModule() -> {{ module_info.name }}ModuleBox {
-    
         let viewController = {{ module_info.name }}ViewController()
         
         let presenter = {{ module_info.name }}Presenter()
@@ -25,6 +24,6 @@ class {{ module_info.name }}Builder {
         presenter.interactor = interactor
         viewController.output = presenter
         
-        return (viewController,presenter, presenter)
+        return (viewController, presenter, presenter)
     }
 }
