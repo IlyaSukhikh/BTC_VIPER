@@ -19,14 +19,14 @@ extension {{ module_info.name }}ViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
+        self.output.viewIsReady()
     }  
     
     override func updateViewConstraints() {
         
-        if !didSetupConstraints {
+        if !self.didSetupConstraints {
 
-            didSetupConstraints = true
+            self.didSetupConstraints = true
         }
         
         super.updateViewConstraints()
@@ -37,7 +37,7 @@ extension {{ module_info.name }}ViewController {
 extension {{ module_info.name }}ViewController:{{module_info.name}}ViewInput {
   
     func setupInitialState() {
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.view.setNeedsUpdateConstraints()
     }
 }
