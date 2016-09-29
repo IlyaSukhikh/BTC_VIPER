@@ -8,7 +8,7 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: UIViewController {
+class {{ module_info.name }}ViewController: PSViewController {
     
     fileprivate var didSetupConstraints = false
     var output: {{ module_info.name }}ViewOutput!
@@ -37,7 +37,6 @@ extension {{ module_info.name }}ViewController {
 extension {{ module_info.name }}ViewController:{{module_info.name}}ViewInput {
   
     func setupInitialState() {
-        self.view.backgroundColor = UIColor.white
         self.view.setNeedsUpdateConstraints()
     }
 }
