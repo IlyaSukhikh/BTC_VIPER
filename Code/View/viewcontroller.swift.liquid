@@ -13,9 +13,7 @@ class {{ module_info.name }}ViewController: PSViewController, {{module_info.name
     fileprivate var didSetupConstraints = false
     var output: {{ module_info.name }}ViewOutput!
 
-
     // MARK: Life cycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.output.viewIsReady()
@@ -31,9 +29,7 @@ class {{ module_info.name }}ViewController: PSViewController, {{module_info.name
         super.updateViewConstraints()
     }
 
-
-    // MARK: {{module_info.name}}ViewInput
-  
+    // MARK: {{module_info.name}}ViewInput 
     func setupInitialState() {
         self.view.setNeedsUpdateConstraints()
     }
@@ -43,5 +39,3 @@ class {{ module_info.name }}ViewController: PSViewController, {{module_info.name
 extension {{ module_info.name }}ViewController {
 
 }
-
-
