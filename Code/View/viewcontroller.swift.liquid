@@ -8,7 +8,7 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: PSViewController, {{module_info.name}}ViewInput {
+final class {{ module_info.name }}ViewController: PSViewController, {{module_info.name}}ViewInput {
     
     fileprivate var didSetupConstraints = false
     var output: {{ module_info.name }}ViewOutput!
@@ -20,12 +20,10 @@ class {{ module_info.name }}ViewController: PSViewController, {{module_info.name
     }  
     
     override func updateViewConstraints() {
-        
         if !self.didSetupConstraints {
 
             self.didSetupConstraints = true
         }
-        
         super.updateViewConstraints()
     }
 
